@@ -1,0 +1,27 @@
+<md-card class="md-inline-form" layout="column" layout-fill flex layout-align="center center">
+    <md-content layout="column" layout-fill flex layout-align="center center">
+        <md-list layout-fill flex>
+            <md-subheader class="md-no-sticky">{{phraseList.length}} line item</md-subheader>
+            <md-list-item flex ng-repeat="phrase in phraseList track by $index">
+                <md-card flex ng-swipe-right="removePhrase($index)">
+<!--                ng-swipe-right-->
+                    <div class="md-list-item-text" layout="row" layout-align="center center">
+                        <h3>{{ phrase.key }}</h3>
+                    </div>
+                </md-card>
+            </md-list-item>
+        </md-list>
+    </md-content>
+    <md-content layout-gt-sm="row" layout-padding>
+        <div>
+            <md-input-container>
+                <label>New Phrase</label>
+                <input ng-model="newPhrase" md-select-on-focus>
+                <div layout="row" layout-fill flex>
+                    <span flex></span>
+                    <md-button ng-click="addPhrase()" flex="30" flex-xs="100" class="md-primary">ADD</md-button>
+                </div>
+            </md-input-container>
+        </div>
+    </md-content>
+</md-card>

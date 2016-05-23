@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="PhraseGenerator">
+
+<head>
+    <meta name="theme-color" content="#3f51b5">
+    <link rel="stylesheet" href="js/bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <script src="js/bower_components/angular/angular.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-touch.js"></script>
+    <script src="js/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="js/bower_components/angular-aria/angular-aria.min.js"></script>
+    <script src="js/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="js/bower_components/angular-material/angular-material.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-material-icons/0.7.0/angular-material-icons.min.js"></script>
+    <script src="js/bower_components/angular-websql/angular-websql.min.js"></script>
+    <script src="js/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/route.js"></script>
+</head>
+
+<body ng-controller="mainCtr as main" ng-cloak layout="column" layout-fill flex>
+    <md-content layout="column" layout-fill layout-align="center center" flex>
+        <md-toolbar ng-controller="dashboardCtr as dashboard">
+            <div class="md-toolbar-tools">
+                <a href="#/"><h2>PHRASE GENERATOR</h2></a>
+                <span flex></span>
+<!--
+                <md-button class="md-icon-button" aria-label="More">
+                    <ng-md-icon icon="more_vert"></ng-md-icon>
+                </md-button>
+-->
+            </div>
+        </md-toolbar>
+        <view ng-view layout="column" layout-fill layout-align="center center" flex></view>
+    </md-content>
+</body>
+
+</html>

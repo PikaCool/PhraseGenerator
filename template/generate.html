@@ -1,0 +1,7 @@
+<md-card layout="column" layout-fill flex layout-align="center center">
+    <h2 layout="row" layout-fill flex layout-align="center end">{{currentPhrase.key}}</h2>
+    <section layout="row" layout-fill flex layout-sm="column" layout-align="center center" layout-wrap>
+        <md-button ng-click="generateNewPhrase()" flex="30" flex-xs="100" class="md-primary">GENERATE A NEW PHRASE</md-button>
+        <md-button ng-click="route('/add')" ng-show="phraseList.length === 0" flex="30" flex-xs="100" class="md-primary">ADD PHRASE TO LOCAL DATABASE</md-button>
+    </section>
+</md-card>
